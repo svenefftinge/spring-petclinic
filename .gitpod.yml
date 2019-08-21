@@ -1,8 +1,12 @@
 image:
   file: Dockerfile
+
+# ports to expose and what to do when they are served
 ports:
 - port: 8080
   onOpen: open-preview
+
+# tasks to execute on start and during prebuilds
 tasks:
 - init: ./mvnw package
   command: ./mvnw spring-boot:run
