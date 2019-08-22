@@ -28,7 +28,6 @@ import javax.validation.constraints.NotEmpty;
 public class Person extends BaseEntity {
 
     @Column(name = "first_name")
-    @NotEmpty
     private String firstName;
 
     @Column(name = "last_name")
@@ -51,4 +50,10 @@ public class Person extends BaseEntity {
         this.lastName = lastName;
     }
 
+    public String getName() {
+        if (this.firstName == null || this.firstName.isEmpty()) {
+            return this.lastName;
+        }
+        return this.firstName + " " + this.lastName;
+    }
 }
