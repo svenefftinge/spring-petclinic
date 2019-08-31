@@ -1,3 +1,2 @@
-FROM gitpod/workspace-full
+FROM gitpod/workspace-full:branch-GH-103
 
-# add your tools here
